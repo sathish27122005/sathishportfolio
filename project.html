@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Sathish</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Rajdhani:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Specific styles for Project Details Page */
+        body {
+            padding-top: 80px;
+            /* Space for fixed nav */
+        }
+
+        .project-hero {
+            height: 60vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            padding: 4rem 5%;
+        }
+
+        .project-hero img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.4);
+        }
+
+        .project-hero-content h1 {
+            font-size: 4rem;
+            font-family: var(--font-heading);
+            color: var(--primary);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+        }
+
+        .project-details-container {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 0 5%;
+        }
+
+        .detail-section {
+            margin-bottom: 4rem;
+        }
+
+        .detail-section h2 {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            font-family: var(--font-heading);
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
+        }
+
+        .detail-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ddd;
+        }
+
+        .tech-stack-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .tech-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--primary);
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            color: var(--primary);
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .tech-item:hover {
+            background: var(--primary);
+            color: var(--dark);
+            box-shadow: 0 0 15px var(--primary);
+        }
+
+        .back-nav {
+            padding: 2rem 5%;
+        }
+
+        .back-btn {
+            color: var(--text);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            color: var(--primary);
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="glass-nav">
+        <div class="logo">SATHISH E<span class="dot">.</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="index.html#certifications">Certifications</a></li>
+        </ul>
+    </nav>
+
+    <div class="back-nav">
+        <a href="index.html#gallery" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+    </div>
+
+    <header class="project-hero">
+        <img id="projectImage" src="" alt="Project Hero">
+        <div class="project-hero-content">
+            <h1 id="projectTitle">Project Title</h1>
+        </div>
+    </header>
+
+    <div class="project-details-container glass-panel">
+        <section class="detail-section">
+            <h2>Project Overview</h2>
+            <p id="projectDescription">Loading project details...</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Technologies Used</h2>
+            <div id="projectTech" class="tech-stack-grid">
+                <!-- Tech items will be injected here -->
+            </div>
+        </section>
+
+        <section class="detail-section">
+            <h2>Key Features</h2>
+            <p id="projectFeatures">
+                Detailed feature list coming soon. This section can be expanded with more specific data for each
+                project.
+            </p>
+        </section>
+
+        <section class="detail-section" id="mediaSection" style="display: none;">
+            <h2>Project Media</h2>
+            <div class="media-grid" style="display: flex; flex-direction: column; gap: 2rem;">
+                <div id="imageContainer" style="display: none;">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem; font-size: 1.5rem;">Project Gallery</h3>
+                    <img id="projectExtraImage" src="" alt="Project Detail"
+                        style="width: 100%; border-radius: 10px; border: 1px solid var(--primary);">
+                </div>
+
+                <div id="videoContainer" style="display: none;">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem; font-size: 1.5rem;">Project Video</h3>
+                    <video id="projectVideo" controls
+                        style="width: 100%; border-radius: 10px; border: 1px solid var(--primary);">
+                        <source id="projectVideoSource" src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Sathish. Designed with <i class="fas fa-heart highlight"></i> using Future Tech.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

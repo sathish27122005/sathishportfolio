@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sathish | Future Tech Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Rajdhani:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+
+
+    <nav class="glass-nav">
+        <div class="logo">SATHISH E<span class="dot">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-bg">
+            <img src="photos/hero-bg.png" alt="Futuristic Background">
+            <div class="overlay"></div>
+
+        </div>
+        <div class="hero-content">
+            <h2 class="animate-text" style="--i:1">Hello, I'm</h2>
+            <h1 class="glitch" data-text="Sathish E">Sathish E</h1>
+            <div class="comet-btn-container">
+                <button id="cometBtn" class="comet-btn" title="Launch Comet">☄️ COMET</button>
+            </div>
+            <div class="tagline-container">
+                <p class="tagline">Electronics Engineering Student | Tech Enthusiast</p>
+            </div>
+            <a href="#about" class="cta-btn">Explore My World</a>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About <span class="highlight">Me</span></h2>
+                <div class="line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-card glass-panel" data-tilt>
+                    <div class="profile-img-container">
+                        <img src="photos/profile.png" alt="Profile" class="profile-img">
+                        <div class="circle-spin"></div>
+                    </div>
+                    <div class="about-text">
+                        <h3>Who I Am</h3>
+                        <ul>
+                            <li>Pre-final year Electronics and Communication Engineering student at Rajalakshmi
+                                Engineering College, Chennai</li>
+                            <li>Passionate about technology, innovation, and real-world problem solving</li>
+                            <li>Interested in embedded systems, IoT, automation, and wireless communication</li>
+                            <li>Aspiring to build meaningful and impactful engineering solutions</li>
+                        </ul>
+
+                        <div class="stats">
+                            <div class="stat-item">
+                                <span class="num" data-val="3">0+</span>
+                                <span class="label">Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="num" data-val="6">0+</span>
+                                <span class="label">Certifications</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="section-title">
+            <h2>3D <span class="highlight">Gallery</span></h2>
+            <p class="gallery-subtitle">Projects</p>
+        </div>
+
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="photos/project1.png" alt="Project 1">
+                    <div class="project-title">Automatic Water Dispenser</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="photos/project2.png" alt="Project 2">
+                    <div class="project-title">Voice Controlled Home Automation</div>
+                </div>
+                <div class="carousel-item">
+                    <img src="photos/project3.png" alt="Project 3">
+                    <div class="project-title">Mesh Networking Using LoRa Module</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content glass-panel">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Project Image">
+                <div class="modal-text">
+                    <h3 id="modalTitle">Project Title</h3>
+                    <p id="modalDescription">Project description will appear here.</p>
+                    <div class="modal-tech">
+                        <h4>Technologies Used:</h4>
+                        <div id="modalTechStack" class="tech-tags"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificate Modal -->
+    <div id="certificateModal" class="modal">
+        <div class="modal-content glass-panel">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img id="certModalImage" src="" alt="Certificate Image" style="object-fit: contain;">
+                <div class="modal-text">
+                    <h3 id="certModalTitle">Certificate Title</h3>
+                    <div class="modal-tech">
+                        <h4>Key Learnings:</h4>
+                        <ul id="certLearningsList" style="list-style: none; padding-left: 0;"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="certifications">
+        <div class="container">
+            <div class="section-title">
+                <h2>My <span class="highlight">Certifications</span></h2>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-card glass-panel">
+                    <img src="photos/certificate1.jpg" alt="Certificate 1">
+                    <h4>AR/VR & Immersive Tech</h4>
+                </div>
+                <div class="cert-card glass-panel">
+                    <img src="photos/certificate2.jpeg" alt="Certificate 2">
+                    <h4>Internet of Things</h4>
+                </div>
+                <div class="cert-card glass-panel">
+                    <img src="photos/certificate3.jpeg" alt="Certificate 3">
+                    <h4>NPTEL Entrepreneurship</h4>
+                </div>
+                <div class="cert-card glass-panel">
+                    <img src="photos/certificate4.jpeg" alt="Certificate 4">
+                    <h4>NPTEL Internet of Things (IoT)</h4>
+                </div>
+                <div class="cert-card glass-panel">
+                    <img src="photos/certificate5.jpeg" alt="Certificate 5">
+                    <h4>Embedded System with IoT</h4>
+                </div>
+                <div class="cert-card glass-panel">
+                    <img src="photos/certificate6.jpeg" alt="Certificate 6">
+                    <h4>Fundamentals in Switchgear and Fuses</h4>
+                </div>
+
+            </div>
+
+            <div class="section-title" style="margin-top: 80px;">
+                <h2>My <span class="highlight">Skills</span></h2>
+            </div>
+            <div class="cards-grid">
+                <div class="card glass-panel">
+                    <div class="card-icon"><i class="fas fa-code"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Building responsive, modern websites using the latest technologies and frameworks.</p>
+                </div>
+                <div class="card glass-panel">
+                    <div class="card-icon"><i class="fas fa-microchip"></i></div>
+                    <h3>Embedded Systems</h3>
+                    <p>Designing efficient firmware and hardware solutions for real-time applications.</p>
+                </div>
+                <div class="card glass-panel">
+                    <div class="card-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Innovation</h3>
+                    <p>Always staying ahead of the curve, learning new tech, and applying it creatively.</p>
+                </div>
+                <div class="card glass-panel">
+                    <div class="card-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Problem Solving</h3>
+                    <p>Approaching complex challenges with a logical and analytical mindset.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In <span class="highlight">Touch</span></h2>
+                <p>Send me a message directly to my Gmail</p>
+            </div>
+            <div class="contact-form-container glass-panel">
+                <form id="contactForm">
+                    <div class="input-group">
+                        <input type="text" id="senderName" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="rating-wrapper">
+                        <div class="rating">
+                            <input type="radio" name="rating" id="star5" value="5"><label for="star5" title="5 stars"><i
+                                    class="fas fa-star"></i></label>
+                            <input type="radio" name="rating" id="star4" value="4"><label for="star4" title="4 stars"><i
+                                    class="fas fa-star"></i></label>
+                            <input type="radio" name="rating" id="star3" value="3"><label for="star3" title="3 stars"><i
+                                    class="fas fa-star"></i></label>
+                            <input type="radio" name="rating" id="star2" value="2"><label for="star2" title="2 stars"><i
+                                    class="fas fa-star"></i></label>
+                            <input type="radio" name="rating" id="star1" value="1"><label for="star1" title="1 star"><i
+                                    class="fas fa-star"></i></label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="messageBody" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="button" id="gravityBtn" class="danger-btn">⚠️ GRAVITY - DO NOT TOUCH ⚠️</button>
+
+                    <button type="submit" class="cta-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/sathish27122005" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sathish-e-8072b6325/" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/SathishE1354153?t=HBXLB2D0D95HD5tWVw_R-A&s=09" target="_blank"
+                    rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:sk7726413@gmail.com" target="_blank" rel="noopener noreferrer"><i
+                        class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2026 Sathish. Designed with <i class="fas fa-heart highlight"></i> using Future Tech.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
